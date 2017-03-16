@@ -6,14 +6,37 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | 古晨博客</title>
+  <title>古晨博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="git部署ssh首先你需要安装gitgit安装教程
+git是分布式的代码管理工具，远程的代码管理是基于SSH的，所以要使用远程的Git则需要SSH的配置。github的SSH配置如下：
+一、设置Git的用户名和电子邮件：
+git config --global user.name“jayson”(github昵称)
+git config --global user.email“jayson@gma">
+<meta property="og:type" content="article">
 <meta property="og:title" content="古晨博客">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/03/09/github配置密钥/index.html">
 <meta property="og:site_name" content="古晨博客">
+<meta property="og:description" content="git部署ssh首先你需要安装gitgit安装教程
+git是分布式的代码管理工具，远程的代码管理是基于SSH的，所以要使用远程的Git则需要SSH的配置。github的SSH配置如下：
+一、设置Git的用户名和电子邮件：
+git config --global user.name“jayson”(github昵称)
+git config --global user.email“jayson@gma">
+<meta property="og:image" content="http://yoursite.com/2016/03/09/github配置密钥/1.png">
+<meta property="og:image" content="http://yoursite.com/2016/03/09/github配置密钥/2.png">
+<meta property="og:image" content="http://yoursite.com/2016/03/09/github配置密钥/3.png">
+<meta property="og:image" content="http://yoursite.com/2016/03/09/github配置密钥/4.png">
+<meta property="og:image" content="http://yoursite.com/2016/03/09/github配置密钥/5.png">
+<meta property="og:image" content="http://yoursite.com/2016/03/09/github配置密钥/6.png">
+<meta property="og:updated_time" content="2017-03-16T03:01:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="古晨博客">
+<meta name="twitter:description" content="git部署ssh首先你需要安装gitgit安装教程
+git是分布式的代码管理工具，远程的代码管理是基于SSH的，所以要使用远程的Git则需要SSH的配置。github的SSH配置如下：
+一、设置Git的用户名和电子邮件：
+git config --global user.name“jayson”(github昵称)
+git config --global user.email“jayson@gma">
+<meta name="twitter:image" content="http://yoursite.com/2016/03/09/github配置密钥/1.png">
   
     <link rel="alternative" href="/atom.xml" title="古晨博客" type="application/atom+xml">
   
@@ -153,43 +176,168 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-github配置密钥" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/09/github配置密钥/" class="archive-article-date">
-  	<time datetime="2016-03-09T15:51:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        <h2 id="git部署ssh"><a href="#git部署ssh" class="headerlink" title="git部署ssh"></a>git部署ssh</h2><p>首先你需要安装git<br><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000/" target="_blank" rel="external">git安装教程</a></p>
+<p>git是分布式的代码管理工具，远程的代码管理是基于SSH的，所以要使用远程的Git则需要SSH的配置。<br><br>github的SSH配置如下：<br></p>
+<p>一、设置Git的用户名和电子邮件：</p>
+<pre><code>git config --global user.name“jayson”(github昵称)
+git config --global user.email“jayson@gmail.com”(github注册账号)
+</code></pre><a id="more"></a>
+<p>二，生成SSH密钥过程：<br></p>
+<pre><code>1、查看密钥是否存在
+    cd〜/ .ssh 
+    如果没有密钥则不会有此文件夹，有则备份删除
+2、生存密钥：
+    $ ssh-keygen -t rsa -C“ jayson@gmail.com” (github注册账号)
+    重点：直接连续按3个回车，密码为空。
+    您的身份信息已保存在/home/tekkub/.ssh/id_rsa中。
+    您的公钥已保存在/home/tekkub/.ssh/id_rsa.pub中。
+    最后得到了两个文件：id_rsa和id_rsa.pub
 
+3、查看密钥&lt;br&gt;
+    mac查看密钥：
+        cd .ssh/（进入密钥文件）
+        ls –a(查看当前文件下所有文件) 
+        cat id_rsa.pub(获取密钥内容，第三步第五小节需要用到) 
+
+    window查看密钥： 
+        1、在C:\Documents and Settings\Administrator\下产生两个文件：id_rsa和id_rsa.pub 
+        2、 把1中生成的密钥文件复制到C:\Documents and Settings\Administrator\.ssh\目录下。
+        用记事本打开id_rsa.pub，(获取密钥内容，第三步第五小节需要用到) 
+</code></pre><p>三、 配置密钥<br><br> 如果还没有注册github账号可以阅读以下<a href="http://www.cnblogs.com/keZhenxu94/p/5288488.html" target="_blank" rel="external">教程</a><br><br> 进入<a href="https://github.com/" target="_blank" rel="external">github</a>网站，登录你的账号<br></p>
+<pre><code>点击头像右边的三角形，选择settings，
+</code></pre><p><img src="/2016/03/09/github配置密钥/1.png" alt="MacDown Screenshot"></p>
+<pre><code>点击下图红框内SSH and GPG keys
+</code></pre><p><img src="/2016/03/09/github配置密钥/2.png" alt="MacDown Screenshot"></p>
+<pre><code>选择下图右上角的 new SSH key 按钮 添加你的密钥
+</code></pre><p><img src="/2016/03/09/github配置密钥/3.png" alt="MacDown Screenshot"></p>
+<pre><code>下图的 title 可以任意填写（建议填一些有意义的标题）
+key里面的内容需要用到之前id_rsa.pub里面的内容，
+详情请看第二步，第三小结-----&gt;查看密钥
+</code></pre><p><img src="/2016/03/09/github配置密钥/4.png" alt="MacDown Screenshot"></p>
+<pre><code>第五步 复   制id_rsa.pub的内容到  key 这个框里面，然后add SSH 
+</code></pre><p><img src="/2016/03/09/github配置密钥/5.png" alt="MacDown Screenshot"></p>
+<pre><code>如下图所示，说明密钥配置成功
+</code></pre><p><img src="/2016/03/09/github配置密钥/6.png" alt="MacDown Screenshot"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/03/09/github配置密钥/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/03/16/hexo搭建博客/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
   
   
-    </div></section>
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -212,8 +360,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
