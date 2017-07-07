@@ -14,15 +14,12 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/16/css垂直水平居中/index.html">
 <meta property="og:site_name" content="古晨博客">
 <meta property="og:description" content="css垂直居中正文：　这边教程是针对与Mac的，参考链接，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。">
-<meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/sample.png">
-<meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/sample.png">
-<meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/sample.png">
-<meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/sample.png">
-<meta property="og:updated_time" content="2017-07-07T02:25:44.000Z">
+<meta property="og:image" content="http://yoursite.com/2017/03/16/css垂直水平居中/img2.png">
+<meta property="og:updated_time" content="2017-07-07T02:29:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="古晨博客">
 <meta name="twitter:description" content="css垂直居中正文：　这边教程是针对与Mac的，参考链接，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。">
-<meta name="twitter:image" content="http://onx0br3fu.bkt.clouddn.com/sample.png">
+<meta name="twitter:image" content="http://yoursite.com/2017/03/16/css垂直水平居中/img2.png">
   
     <link rel="alternative" href="/atom.xml" title="古晨博客" type="application/atom+xml">
   
@@ -171,51 +168,50 @@
 
 <h2 id="css垂直居中"><a href="#css垂直居中" class="headerlink" title="css垂直居中"></a><p>css垂直居中</p></h2><p>正文：<br>　这边教程是针对与Mac的，参考链接，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。</p>
 <a id="more"></a>
-<p>　  &gt;&gt;&gt; 第一种方法使用绝对定位垂直居中<br>    1、父级元素定义使用定位元素 position:relative<br>    2、子集元素使用position:absolute<br>       通过top:50%; margin-top:-100px; 图片的1/2高度  如果不知道具体高度 可以使用 transform:translateY(-50%)<br>       如果需要水平垂直居中的话 可以添加left:50% margin-left:-100px 也可以直接使用 transform:translate(-50%,-50%); 垂直水平居中<br>       具体代码如下</p>
-<pre><code>&gt; html
-&lt;div id=&quot;app&quot;&gt;
-    &lt;img src=&quot;images/img2.png&quot; &gt;
-&lt;/div&gt;
-
-
-&gt;css
-&lt;style type=&quot;text/css&quot;&gt;
- #app{ width: 400px; height: 400px; border: 1px solid #c2c2c2; margin:0 auto; position:relative}
+<blockquote>
+<blockquote>
+<blockquote>
+<p>第一种方法使用绝对定位垂直居中<br>1、父级元素定义使用定位元素 position:relative<br>2、子集元素使用position:absolute<br>       通过top:50%; margin-top:-100px; 图片的1/2高度  如果不知道具体高度 可以使用 transform:translateY(-50%)<br>       如果需要水平垂直居中的话 可以添加left:50% margin-left:-100px 也可以直接使用 transform:translate(-50%,-50%); 垂直水平居中<br>       具体代码如下</p>
+</blockquote>
+</blockquote>
+<p>html<br>    <div id="app"><br>        <img src="/2017/03/16/css垂直水平居中/img2.png"><br>    </div></p>
+<p>css<br>    <style type="text/css"></p>
+<pre><code> #app{ width: 400px; height: 400px; border: 1px solid #c2c2c2; margin:0 auto; position:relative}
 #app img{ width: 200px; height: 200px; position: absolute; top:50%; left: 50%; transform:translate(-50%,-50%);
       }
 &lt;/style&gt;
-</code></pre><p>效果图如下<br><img src="http://onx0br3fu.bkt.clouddn.com/sample.png" alt="hello"></p>
+</code></pre></blockquote>
+<p>效果图如下<br><img src="http://onx0br3fu.bkt.clouddn.com/sample.png" alt="hello"></p>
 <p>&lt;————————————————神奇的分割线————————————————&gt;</p>
-<pre><code>&gt;&gt;&gt; 第二种方法  使用表格的display: table-cell;  
-  w3c对于table-cell的解释 此元素会作为一个表格单元格显示（类似 &lt;td&gt; 和 &lt;th&gt;）  
-         vertical-align: middle; 把此元素放置在父元素的中部。
-  1、父级元素定义 display: table-cell; vertical-align: middle;
-  2、子集元素使用  vertical-align: middle;
-       具体代码如下
-  3、如果需要水平居中，可在父级元素中添加 text-align:center;
+<blockquote>
+<blockquote>
+<blockquote>
+<p>第二种方法  使用表格的display: table-cell;<br>w3c对于table-cell的解释 此元素会作为一个表格单元格显示（类似 <td> 和 <th>）<br>       vertical-align: middle; 把此元素放置在父元素的中部。<br>1、父级元素定义 display: table-cell; vertical-align: middle;<br>2、子集元素使用  vertical-align: middle;<br>3、如果需要水平居中，可在父级元素中添加 text-align:center;<br>具体代码如下<br>html<br>    <div id="app1"><br>        <img src="images/img2.png" ><br>    </div></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>1</p>
 
-&gt; html
-&lt;div id=&quot;app1&quot;&gt;
-    &lt;img src=&quot;images/img2.png&quot; &gt;
-&lt;/div&gt;
-
-
-&gt;css
+<pre><code>&gt;css
 &lt;style type=&quot;text/css&quot;&gt;
     #app1{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2; text-align: center; margin:0 auto; display: table-cell; vertical-align: middle;}
     #app1 img{ width: 200px; height: 200px; vertical-align: middle;  }
 &lt;/style&gt;
 </code></pre><p>效果图如下<br><img src="http://onx0br3fu.bkt.clouddn.com/sample.png" alt="hello"></p>
 <p>&lt;————————————————神奇的分割线————————————————&gt;</p>
-<pre><code>&gt;&gt;&gt; 第三种方法  transform:translateY(y)定义转换，只是用 Y 轴的值。  
-1、直接在子元素中定义  transform:translateY(50%) 可垂直居中，效果如图
-2、如果需要水平居中，可在父级元素中添加 text-align:center;
-</code></pre><p></p><p></p><p></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>第三种方法  transform:translateY(y)定义转换，只是用 Y 轴的值。<br>1、直接在子元素中定义  transform:translateY(50%) 可垂直居中，效果如图<br>2、如果需要水平居中，可在父级元素中添加 text-align:center;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p><p></p></p>
 <pre><code>&gt; html
 &lt;div id=&quot;app2&quot;&gt;
     &lt;img src=&quot;images/img2.png&quot; &gt;
 &lt;/div&gt;
-</code></pre><p></p><p></p>    <p></p>
+</code></pre><p><p></p>    </p>
 <pre><code>&gt;css
 &lt;style type=&quot;text/css&quot;&gt;
    #app2{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2; text-align: center; }
@@ -223,26 +219,20 @@
 &lt;/style&gt;
 </code></pre><p>效果图如下<br><img src="http://onx0br3fu.bkt.clouddn.com/sample.png" alt="hello"></p>
 <p>&lt;————————————————神奇的分割线————————————————&gt;</p>
-<pre><code>&gt; 第四种方法  使用display:flex
-1、直接在父级元素定义 display:flex;align-items:center;
-2、如果需要水平居中，可在父级元素中添加 justify-content:center;
-
-&gt; html
-&lt;div id=&quot;app3&quot;&gt;
-    &lt;img src=&quot;images/img2.png&quot; &gt;
-&lt;/div&gt;
-
-
-&gt;css
-&lt;style type=&quot;text/css&quot;&gt;
-   #app3{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2;  text-align: center; display:flex;align-items:center; justify-content:center;}
+<blockquote>
+<blockquote>
+<blockquote>
+<p>第四种方法  使用display:flex<br>1、直接在父级元素定义 display:flex;align-items:center;<br>2、如果需要水平居中，可在父级元素中添加 justify-content:center;</p>
+</blockquote>
+</blockquote>
+<p>html<br>    <div id="app3"><br>        <img src="images/img2.png" ><br>    </div></p>
+<p>css<br>    <style type="text/css"></p>
+<pre><code>   #app3{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2;  text-align: center; display:flex;align-items:center; justify-content:center;}
 #app3 img{ width: 200px; height: 200px;  }
 &lt;/style&gt;
-
-
-效果图如下
-</code></pre><p><img src="http://onx0br3fu.bkt.clouddn.com/sample.png" alt="hello"></p>
-
+</code></pre></blockquote>
+<p>效果图如下<br><img src="http://onx0br3fu.bkt.clouddn.com/sample.png" alt="hello"></p>
+</style></p></blockquote>
       
 
       
