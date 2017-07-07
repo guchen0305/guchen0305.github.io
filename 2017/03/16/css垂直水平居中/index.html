@@ -8,12 +8,21 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>古晨博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="css垂直居中正文：　这边教程是针对与Mac的，参考链接，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。">
+<meta property="og:type" content="article">
 <meta property="og:title" content="古晨博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/03/16/css垂直水平居中/index.html">
 <meta property="og:site_name" content="古晨博客">
+<meta property="og:description" content="css垂直居中正文：　这边教程是针对与Mac的，参考链接，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。">
+<meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/sample.png">
+<meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/sample.png">
+<meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/sample.png">
+<meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/sample.png">
+<meta property="og:updated_time" content="2017-07-06T06:40:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="古晨博客">
+<meta name="twitter:description" content="css垂直居中正文：　这边教程是针对与Mac的，参考链接，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。">
+<meta name="twitter:image" content="http://onx0br3fu.bkt.clouddn.com/sample.png">
   
     <link rel="alternative" href="/atom.xml" title="古晨博客" type="application/atom+xml">
   
@@ -153,65 +162,122 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-gulp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-css垂直水平居中" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p></p>
-
-
-<h3 id="gulp-压缩css-（简单入门）"><a href="#gulp-压缩css-（简单入门）" class="headerlink" title="  gulp 压缩css （简单入门）"></a><p>  gulp 压缩css （简单入门）</p></h3><blockquote>
-<p>安装Node（必须）</p>
-</blockquote>
-<p>作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。<br></p>
-        
-          <a class="article-more-a" href="/2017/03/16/gulp/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/16/gulp/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-css垂直水平居中" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p></p>
+          <p></p>
 
 <h2 id="css垂直居中"><a href="#css垂直居中" class="headerlink" title="css垂直居中"></a><p>css垂直居中</p></h2><p>正文：<br>　这边教程是针对与Mac的，参考链接，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。</p>
-        
-          <a class="article-more-a" href="/2017/03/16/css垂直水平居中/#more">more >></a>
-        
+<a id="more"></a>
+<p>　  &gt; 第一种方法使用绝对定位垂直居中<br>    1、父级元素定义使用定位元素 position:relative<br>    2、子集元素使用position:absolute<br>       通过top:50%; margin-top:-100px; 图片的1/2高度  如果不知道具体高度 可以使用 transform:translateY(-50%)<br>       如果需要水平垂直居中的话 可以添加left:50% margin-left:-100px 也可以直接使用 transform:translate(-50%,-50%); 垂直水平居中<br>       具体代码如下</p>
+<pre><code>&gt; html
+&lt;div id=&quot;app&quot;&gt;
+    &lt;img src=&quot;images/img2.png&quot; &gt;
+&lt;/div&gt;
+
+
+&gt;css
+&lt;style type=&quot;text/css&quot;&gt;
+ #app{ width: 400px; height: 400px; border: 1px solid #c2c2c2; margin:0 auto; position:relative}
+#app img{ width: 200px; height: 200px; position: absolute; top:50%; left: 50%; transform:translate(-50%,-50%);
+      }
+&lt;/style&gt;
+
+
+效果图如下
+</code></pre><p><img src="http://onx0br3fu.bkt.clouddn.com/sample.png" alt="hello"></p>
+<pre><code>&lt;------------------------神奇的分割线------------------------&gt;
+
+&gt; 第二种方法  使用表格的display: table-cell;  
+  w3c对于table-cell的解释 此元素会作为一个表格单元格显示（类似 &lt;td&gt; 和 &lt;th&gt;）  
+         vertical-align: middle; 把此元素放置在父元素的中部。
+  1、父级元素定义 display: table-cell; vertical-align: middle;
+  2、子集元素使用  vertical-align: middle;
+       具体代码如下
+  3、如果需要水平居中，可在父级元素中添加 text-align:center;
+
+&gt; html
+&lt;div id=&quot;app1&quot;&gt;
+    &lt;img src=&quot;images/img2.png&quot; &gt;
+&lt;/div&gt;
+
+
+&gt;css
+&lt;style type=&quot;text/css&quot;&gt;
+    #app1{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2; text-align: center; margin:0 auto; display: table-cell; vertical-align: middle;}
+    #app1 img{ width: 200px; height: 200px; vertical-align: middle;  }
+&lt;/style&gt;
+
+
+效果图如下
+</code></pre><p><img src="http://onx0br3fu.bkt.clouddn.com/sample.png" alt="hello"></p>
+<pre><code>&lt;------------------------神奇的分割线------------------------&gt;
+
+&gt; 第三种方法  transform:translateY(y)定义转换，只是用 Y 轴的值。  
+1、直接在子元素中定义  transform:translateY(50%) 可垂直居中，效果如图
+2、如果需要水平居中，可在父级元素中添加 text-align:center;
+
+&gt; html
+&lt;div id=&quot;app2&quot;&gt;
+    &lt;img src=&quot;images/img2.png&quot; &gt;
+&lt;/div&gt;
+
+
+&gt;css
+&lt;style type=&quot;text/css&quot;&gt;
+   #app2{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2; text-align: center; }
+      #app2 img{ width: 200px; height: 200px;  transform:translateY(50%)  }
+&lt;/style&gt;
+
+
+效果图如下
+</code></pre><p><img src="http://onx0br3fu.bkt.clouddn.com/sample.png" alt="hello"></p>
+<p>&lt;————————神奇的分割线————————&gt;</p>
+<pre><code>&gt; 第四种方法  使用display:flex
+1、直接在父级元素定义 display:flex;align-items:center;
+2、如果需要水平居中，可在父级元素中添加 justify-content:center;
+
+&gt; html
+&lt;div id=&quot;app3&quot;&gt;
+    &lt;img src=&quot;images/img2.png&quot; &gt;
+&lt;/div&gt;
+
+
+&gt;css
+&lt;style type=&quot;text/css&quot;&gt;
+   #app3{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2;  text-align: center; display:flex;align-items:center; justify-content:center;}
+#app3 img{ width: 200px; height: 200px;  }
+&lt;/style&gt;
+
+
+效果图如下
+</code></pre><p><img src="http://onx0br3fu.bkt.clouddn.com/sample.png" alt="hello"></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -220,18 +286,83 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/16/css垂直水平居中/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/16/css垂直水平居中/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+    <a href="/2017/03/16/gulp/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/16/hexo搭建博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -239,87 +370,10 @@
 
 
   
-    <article id="post-hexo搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p></p>
-
-<h2 id="hexo搭建博客"><a href="#hexo搭建博客" class="headerlink" title="hexo搭建博客"></a><p>hexo搭建博客</p></h2><p>正文：<br>　这边教程是针对与Mac的，参考链接，由于原文讲到的hexo是以前的老版本，所以现在的版本配置的时候会有些改动。</p>
-        
-          <a class="article-more-a" href="/2017/03/16/hexo搭建博客/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/16/hexo搭建博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
+    <div class="duoshuo"></div>
   
-    <article id="post-github配置密钥" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p></p>
-
-<h2 id="git部署ssh"><a href="#git部署ssh" class="headerlink" title="git部署ssh"></a><p>git部署ssh</p></h2><p>首先安装git环境<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000/">git安装教程</a><br></p>
-        
-          <a class="article-more-a" href="/2016/03/09/github配置密钥/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/03/09/github配置密钥/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
 
 
-
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -341,8 +395,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
