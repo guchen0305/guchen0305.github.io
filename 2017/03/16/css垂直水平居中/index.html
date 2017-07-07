@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
 <meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
 <meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
-<meta property="og:updated_time" content="2017-07-07T03:05:48.000Z">
+<meta property="og:updated_time" content="2017-07-07T03:07:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="古晨博客">
 <meta name="twitter:description" content="css垂直居中">
@@ -198,13 +198,13 @@
 &lt;/style&gt;
 </code></pre><p>效果图如下<br><img src="http://onx0br3fu.bkt.clouddn.com/samples.png" alt="hello"></p>
 <h3 id="第三种方法-transform-translateY-y-定义转换，只是用-Y-轴的值。"><a href="#第三种方法-transform-translateY-y-定义转换，只是用-Y-轴的值。" class="headerlink" title="第三种方法  transform:translateY(y)定义转换，只是用 Y 轴的值。"></a>第三种方法  transform:translateY(y)定义转换，只是用 Y 轴的值。</h3><p>1、直接在子元素中定义  transform:translateY(50%) 可垂直居中，效果如图<br>2、如果需要水平居中，可在父级元素中添加 text-align:center;<br>具体代码如下</p>
-<pre><code>&gt;&gt;&gt;html
+<pre><code>html&gt;&gt;&gt;
 &lt;div id=&quot;app2&quot;&gt;
     &lt;img src=&quot;images/sample.png&quot; &gt;
 &lt;/div&gt;
 </code></pre><p></p>
 
-<pre><code>&gt;&gt;&gt;css
+<pre><code>css&gt;&gt;&gt;
 &lt;style type=&quot;text/css&quot;&gt;
    #app2{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2; text-align: center; }
       #app2 img{ width: 200px; height: 200px;  transform:translateY(50%)  }
