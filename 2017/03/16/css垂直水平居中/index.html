@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://yoursite.com/2017/03/16/css垂直水平居中/sample.png">
 <meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
 <meta property="og:image" content="http://yoursite.com/2017/03/16/css垂直水平居中/sample.png">
-<meta property="og:updated_time" content="2017-07-07T02:57:56.000Z">
+<meta property="og:updated_time" content="2017-07-07T03:00:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="古晨博客">
 <meta name="twitter:description" content="css垂直居中">
@@ -171,16 +171,13 @@
 
 <h2 id="css垂直居中"><a href="#css垂直居中" class="headerlink" title="css垂直居中"></a><p>css垂直居中</p></h2><a id="more"></a>
 <h3 id="第一种方法使用绝对定位垂直居中"><a href="#第一种方法使用绝对定位垂直居中" class="headerlink" title="第一种方法使用绝对定位垂直居中"></a>第一种方法使用绝对定位垂直居中</h3><p>1、父级元素定义使用定位元素 position:relative<br>2、子集元素使用position:absolute<br>   通过top:50%; margin-top:-100px; 图片的1/2高度  如果不知道具体高度 可以使用 transform:translateY(-50%)<br>   如果需要水平垂直居中的话 可以添加left:50% margin-left:-100px 也可以直接使用 transform:translate(-50%,-50%); 垂直水平居中<br>   具体代码如下</p>
-<pre><code>&lt;p&gt;&lt;/p&gt; 
-
-html
+<pre><code>html
 &lt;div id=&quot;app&quot;&gt;
     &lt; img src=&quot;images/ sample.png&quot; &gt;
 &lt;/div&gt;
+</code></pre><p></p>
 
-&lt;p&gt;&lt;/p&gt;
-
-css
+<pre><code>css
 &lt;style type=&quot;text/css&quot;&gt;
  #app{ width: 400px; height: 400px; border: 1px solid #c2c2c2; margin:0 auto; position:relative}
 #app img{ width: 200px; height: 200px; position: absolute; top:50%; left: 50%; transform:translate(-50%,-50%);
