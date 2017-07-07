@@ -15,10 +15,9 @@
 <meta property="og:site_name" content="古晨博客">
 <meta property="og:description" content="css垂直居中">
 <meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
-<meta property="og:image" content="http://yoursite.com/2017/03/16/css垂直水平居中/sample.png">
 <meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
 <meta property="og:image" content="http://yoursite.com/2017/03/16/css垂直水平居中/sample.png">
-<meta property="og:updated_time" content="2017-07-07T03:00:02.000Z">
+<meta property="og:updated_time" content="2017-07-07T03:01:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="古晨博客">
 <meta name="twitter:description" content="css垂直居中">
@@ -186,9 +185,14 @@
 </code></pre><p>效果图如下<br>    <img src="http://onx0br3fu.bkt.clouddn.com/samples.png" alt="hello"></p>
 <p>&lt;————————————————神奇的分割线————————————————&gt;</p>
 <h3 id="第二种方法-使用表格的display-table-cell"><a href="#第二种方法-使用表格的display-table-cell" class="headerlink" title="第二种方法  使用表格的display: table-cell;"></a>第二种方法  使用表格的display: table-cell;</h3><p>w3c对于table-cell的解释 此元素会作为一个表格单元格显示（类似 <td> 和 <th>）<br>       vertical-align: middle; 把此元素放置在父元素的中部。<br>1、父级元素定义 display: table-cell; vertical-align: middle;<br>2、子集元素使用  vertical-align: middle;<br>3、如果需要水平居中，可在父级元素中添加 text-align:center;<br>具体代码如下</th></td></p>
-<p></p><br>    &gt; html<br>    <div id="app1"><br>        <img src="/2017/03/16/css垂直水平居中/sample.png"><br>    </div><br><br><p></p>    
+<pre><code>&gt; html
+&lt;div id=&quot;app1&quot;&gt;
+    &lt;img src=&quot;images/sample.png&quot; &gt;
+&lt;/div&gt;
 
-<pre><code>&gt;css
+
+
+&gt;css
 &lt;style type=&quot;text/css&quot;&gt;
     #app1{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2; text-align: center; margin:0 auto; display: table-cell; vertical-align: middle;}
     #app1 img{ width: 200px; height: 200px; vertical-align: middle;  }
@@ -197,15 +201,7 @@
 <p>&lt;————————————————神奇的分割线————————————————&gt;</p>
 <blockquote>
 <p>第三种方法  transform:translateY(y)定义转换，只是用 Y 轴的值。<br>1、直接在子元素中定义  transform:translateY(50%) 可垂直居中，效果如图<br>2、如果需要水平居中，可在父级元素中添加 text-align:center;</p>
-</blockquote>
-<p></p>
-
-<blockquote>
 <p>html<br>    <div id="app2"><br>        <img src="/2017/03/16/css垂直水平居中/sample.png"><br>    </div></p>
-</blockquote>
-<p></p>    
-
-<blockquote>
 <p>css<br>    <style type="text/css"></p>
 <pre><code>   #app2{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2; text-align: center; }
       #app2 img{ width: 200px; height: 200px;  transform:translateY(50%)  }
@@ -214,15 +210,14 @@
 <p>效果图如下<br><img src="http://onx0br3fu.bkt.clouddn.com/samples.png" alt="hello"></p>
 <p>&lt;————————————————神奇的分割线————————————————&gt;</p>
 <h3 id="第四种方法-使用display-flex"><a href="#第四种方法-使用display-flex" class="headerlink" title="第四种方法  使用display:flex"></a>第四种方法  使用display:flex</h3><p>1、直接在父级元素定义 display:flex;align-items:center;<br>2、如果需要水平居中，可在父级元素中添加 justify-content:center;</p>
-<p></p>
-
 <pre><code>&gt; html
 &lt;div id=&quot;app3&quot;&gt;
     &lt;img src=&quot;images/sample.png&quot; &gt;
 &lt;/div&gt;
-</code></pre><p></p>    
 
-<pre><code>&gt;css
+
+
+&gt;css
 &lt;style type=&quot;text/css&quot;&gt;
    #app3{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2;  text-align: center; display:flex;align-items:center; justify-content:center;}
 #app3 img{ width: 200px; height: 200px;  }
