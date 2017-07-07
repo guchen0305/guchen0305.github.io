@@ -14,16 +14,15 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/16/css垂直水平居中/index.html">
 <meta property="og:site_name" content="古晨博客">
 <meta property="og:description" content="css垂直居中">
-<meta property="og:image" content="http://yoursite.com/2017/03/16/css垂直水平居中/sample.png">
 <meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
 <meta property="og:image" content="http://yoursite.com/2017/03/16/css垂直水平居中/sample.png">
 <meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
 <meta property="og:image" content="http://yoursite.com/2017/03/16/css垂直水平居中/sample.png">
-<meta property="og:updated_time" content="2017-07-07T02:54:38.000Z">
+<meta property="og:updated_time" content="2017-07-07T02:56:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="古晨博客">
 <meta name="twitter:description" content="css垂直居中">
-<meta name="twitter:image" content="http://yoursite.com/2017/03/16/css垂直水平居中/sample.png">
+<meta name="twitter:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
   
     <link rel="alternative" href="/atom.xml" title="古晨博客" type="application/atom+xml">
   
@@ -175,9 +174,20 @@
 <p></p> 
 
 <blockquote>
-<p>html<br>    <div id="app"><br>        <img src="/2017/03/16/css垂直水平居中/sample.png"><br>    </div></p>
+<p>html<br>    <div id="app"><br>        &lt; img src=”images/ sample.png” &gt;<br>    </div></p>
 </blockquote>
-<p></p><br>    &gt;css<br>    <style type="text/css"><br>     #app{ width: 400px; height: 400px; border: 1px solid #c2c2c2; margin:0 auto; position:relative}<br>    #app img{ width: 200px; height: 200px; position: absolute; top:50%; left: 50%; transform:translate(-50%,-50%);<br>          }<br>    </style><br><br><br>效果图如下<br>    <img src="http://onx0br3fu.bkt.clouddn.com/samples.png" alt="hello"><br><br><br>&lt;————————————————神奇的分割线————————————————&gt;<br><br>### 第二种方法  使用表格的display: table-cell;<br>w3c对于table-cell的解释 此元素会作为一个表格单元格显示（类似 <td> 和 <th>）<br>       vertical-align: middle; 把此元素放置在父元素的中部。<br>1、父级元素定义 display: table-cell; vertical-align: middle;<br>2、子集元素使用  vertical-align: middle;<br>3、如果需要水平居中，可在父级元素中添加 text-align:center;<br>具体代码如下<br><br><p></p><br>    &gt; html<br>    <div id="app1"><br>        <img src="/2017/03/16/css垂直水平居中/sample.png"><br>    </div><br><br><p></p>    
+<p></p>
+
+<pre><code>&gt;css
+&lt;style type=&quot;text/css&quot;&gt;
+ #app{ width: 400px; height: 400px; border: 1px solid #c2c2c2; margin:0 auto; position:relative}
+#app img{ width: 200px; height: 200px; position: absolute; top:50%; left: 50%; transform:translate(-50%,-50%);
+      }
+&lt;/style&gt;
+</code></pre><p>效果图如下<br>    <img src="http://onx0br3fu.bkt.clouddn.com/samples.png" alt="hello"></p>
+<p>&lt;————————————————神奇的分割线————————————————&gt;</p>
+<h3 id="第二种方法-使用表格的display-table-cell"><a href="#第二种方法-使用表格的display-table-cell" class="headerlink" title="第二种方法  使用表格的display: table-cell;"></a>第二种方法  使用表格的display: table-cell;</h3><p>w3c对于table-cell的解释 此元素会作为一个表格单元格显示（类似 <td> 和 <th>）<br>       vertical-align: middle; 把此元素放置在父元素的中部。<br>1、父级元素定义 display: table-cell; vertical-align: middle;<br>2、子集元素使用  vertical-align: middle;<br>3、如果需要水平居中，可在父级元素中添加 text-align:center;<br>具体代码如下</th></td></p>
+<p></p><br>    &gt; html<br>    <div id="app1"><br>        <img src="/2017/03/16/css垂直水平居中/sample.png"><br>    </div><br><br><p></p>    
 
 <pre><code>&gt;css
 &lt;style type=&quot;text/css&quot;&gt;
@@ -219,7 +229,7 @@
 #app3 img{ width: 200px; height: 200px;  }
 &lt;/style&gt;
 </code></pre><p>效果图如下<br><img src="http://onx0br3fu.bkt.clouddn.com/samples.png" alt="hello"></p>
-</style></p></blockquote></th></td>
+</style></p></blockquote>
       
 
       
