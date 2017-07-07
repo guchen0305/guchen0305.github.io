@@ -16,8 +16,9 @@
 <meta property="og:description" content="css垂直居中">
 <meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
 <meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
-<meta property="og:image" content="http://yoursite.com/2017/03/16/css垂直水平居中/sample.png">
-<meta property="og:updated_time" content="2017-07-07T03:04:15.000Z">
+<meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
+<meta property="og:image" content="http://onx0br3fu.bkt.clouddn.com/samples.png">
+<meta property="og:updated_time" content="2017-07-07T03:05:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="古晨博客">
 <meta name="twitter:description" content="css垂直居中">
@@ -197,27 +198,18 @@
 &lt;/style&gt;
 </code></pre><p>效果图如下<br><img src="http://onx0br3fu.bkt.clouddn.com/samples.png" alt="hello"></p>
 <h3 id="第三种方法-transform-translateY-y-定义转换，只是用-Y-轴的值。"><a href="#第三种方法-transform-translateY-y-定义转换，只是用-Y-轴的值。" class="headerlink" title="第三种方法  transform:translateY(y)定义转换，只是用 Y 轴的值。"></a>第三种方法  transform:translateY(y)定义转换，只是用 Y 轴的值。</h3><p>1、直接在子元素中定义  transform:translateY(50%) 可垂直居中，效果如图<br>2、如果需要水平居中，可在父级元素中添加 text-align:center;<br>具体代码如下</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>html<br>    <div id="app2"><br>        <img src="/2017/03/16/css垂直水平居中/sample.png"><br>    </div></p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p></p>
+<pre><code>&gt;&gt;&gt;html
+&lt;div id=&quot;app2&quot;&gt;
+    &lt;img src=&quot;images/sample.png&quot; &gt;
+&lt;/div&gt;
+</code></pre><p></p>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>css<br>    <style type="text/css"></p>
-<pre><code>   #app2{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2; text-align: center; }
+<pre><code>&gt;&gt;&gt;css
+&lt;style type=&quot;text/css&quot;&gt;
+   #app2{ width: 400px; height: 400px; margin:0 auto; border: 1px solid #c2c2c2; text-align: center; }
       #app2 img{ width: 200px; height: 200px;  transform:translateY(50%)  }
 &lt;/style&gt;
-</code></pre></blockquote>
-</blockquote>
-</blockquote>
-<p>效果图如下<br><img src="http://onx0br3fu.bkt.clouddn.com/samples.png" alt="hello"></p>
-<p>&lt;————————————————神奇的分割线————————————————&gt;</p>
+</code></pre><p>效果图如下<br><img src="http://onx0br3fu.bkt.clouddn.com/samples.png" alt="hello"></p>
 <h3 id="第四种方法-使用display-flex"><a href="#第四种方法-使用display-flex" class="headerlink" title="第四种方法  使用display:flex"></a>第四种方法  使用display:flex</h3><p>1、直接在父级元素定义 display:flex;align-items:center;<br>2、如果需要水平居中，可在父级元素中添加 justify-content:center;</p>
 <pre><code>&gt;&gt;&gt;html
 &lt;div id=&quot;app3&quot;&gt;
@@ -232,7 +224,7 @@
 #app3 img{ width: 200px; height: 200px;  }
 &lt;/style&gt;
 </code></pre><p>效果图如下<br><img src="http://onx0br3fu.bkt.clouddn.com/samples.png" alt="hello"></p>
-</style></p></blockquote></blockquote></blockquote>
+
       
 
       
