@@ -8,25 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>古晨博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="gulp 压缩css （简单入门）
-安装Node（必须）
-
-作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。">
+  <meta name="description" content="JavaScript字符串操作1、charCodeAt方法返回一个整数，代表指定位置字符的Unicode编码。strObj.charCodeAt(index)说明：index将被处理字符的从零开始计数的编号。有效值为0到字符串长度减1的数字。如果指定位置没有字符，将返回NaN。例如：var str = “ABC”;str.charCodeAt(0);结果：65">
 <meta property="og:type" content="article">
 <meta property="og:title" content="古晨博客">
-<meta property="og:url" content="http://yoursite.com/2017/03/16/gulp/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/03/16/javascript字符串操作/index.html">
 <meta property="og:site_name" content="古晨博客">
-<meta property="og:description" content="gulp 压缩css （简单入门）
-安装Node（必须）
-
-作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。">
-<meta property="og:updated_time" content="2017-04-05T03:56:27.000Z">
+<meta property="og:description" content="JavaScript字符串操作1、charCodeAt方法返回一个整数，代表指定位置字符的Unicode编码。strObj.charCodeAt(index)说明：index将被处理字符的从零开始计数的编号。有效值为0到字符串长度减1的数字。如果指定位置没有字符，将返回NaN。例如：var str = “ABC”;str.charCodeAt(0);结果：65">
+<meta property="og:updated_time" content="2017-08-03T02:00:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="古晨博客">
-<meta name="twitter:description" content="gulp 压缩css （简单入门）
-安装Node（必须）
-
-作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。">
+<meta name="twitter:description" content="JavaScript字符串操作1、charCodeAt方法返回一个整数，代表指定位置字符的Unicode编码。strObj.charCodeAt(index)说明：index将被处理字符的从零开始计数的编号。有效值为0到字符串长度减1的数字。如果指定位置没有字符，将返回NaN。例如：var str = “ABC”;str.charCodeAt(0);结果：65">
   
     <link rel="alternative" href="/atom.xml" title="古晨博客" type="application/atom+xml">
   
@@ -166,62 +157,16 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-gulp" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-javascript字符串操作" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-          <p></p>
+        <p></p>
 
-
-<h3 id="gulp-压缩css-（简单入门）"><a href="#gulp-压缩css-（简单入门）" class="headerlink" title="  gulp 压缩css （简单入门）"></a><p>  gulp 压缩css （简单入门）</p></h3><blockquote>
-<p>安装Node（必须）</p>
-</blockquote>
-<p>作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。<br><a id="more"></a><br>正式安装</p>
-<blockquote>
-<p>一、全局安装gulp</p>
-</blockquote>
-<p>npm install –global gulp 或者 </p>
-<blockquote>
-<p>二、进入你的文件目录 例如   cd/d/project 文件夹   在当前文件夹安装</p>
-</blockquote>
-<p>确保根目录下面有 package.json文件如果没有，使用 npm init 命令自动生成<br><!--more--><br>执行命令之后你会看到如下信息<br>This utility will walk you through creating a package.json file.<br>It only covers the most common items, and tries to guess sensible defaults.</p>
-<p>See <code>npm help json</code> for definitive documentation on these fields<br>and exactly what they do.</p>
-<p>Use <code>npm install &lt;pkg&gt; --save</code> afterwards to install a package and<br>save it as a dependency in the package.json file.</p>
-<p>Press ^C at any time to quit.<br>name: (Other) </p>
-<p>name 必须填写，其他可以忽略 一直回车  根目录会生成 package.json</p>
-<blockquote>
-<p>三、作为项目的开发依赖（devDependencies）安装：<br>$ npm install –save-dev gulp  </p>
-</blockquote>
-<p></p><p></p><p></p>
-<blockquote>
-<p>四、安装 gulp-minify-css 模块</p>
-</blockquote>
-<p>在命令行输入<br>npm install gulp-minify-css</p>
-<p>安装成功后你会看到如下信息：(安装时间可能会比较长取决于网络)<br><code>-- gulp-minify-css@1.2.4
-+-- clean-css@3.4.19
-| +-- commander@2.8.1
-| |</code>– graceful-readlink@1.0.1<br>| <code>-- source-map@0.4.4
-|</code>– amdefine@1.0.0<br>+– object-assign@4.1.0<br><code>-- vinyl-bufferstream@1.0.1</code>– bufferstreams@1.0.1<br><code>-- readable-stream@1.1.14</code>– isarray@0.0.1</p>
-<blockquote>
-<p>五、在对应目录创建 gulpfile.js 文件并写入如下内容：<br>// 获取 gulp<br>var gulp = require(‘gulp’)</p>
-</blockquote>
-<p>// 获取 minify-css 模块（用于压缩 CSS）<br>var minifyCSS = require(‘gulp-minify-css’)</p>
-<p>// 压缩 css 文件<br>// 在命令行使用 gulp css 启动此任务<br>gulp.task(‘mincss’, function () {<br>// 1. 找到文件<br>gulp.src(‘css/*.css’)<br>// 2. 压缩文件<br>.pipe(minifyCSS())<br>// 3. 另存为压缩文件，该路径自动生成，无需新建<br>.pipe(gulp.dest(‘dist/css’))<br>})</p>
-<p>// 在命令行使用 gulp swatch 启动此任务<br>gulp.task(‘swatch’, function () {<br>// 监听文件修改，当文件被修改则执行 css 任务<br>gulp.watch(‘css/*.css’, [‘mincss’])<br>});</p>
-<p>// 使用 gulp.task(‘default’) 定义默认任务<br>// 在命令行使用 gulp 启动 mincss 任务和 swatch 任务<br>gulp.task(‘default’, [‘mincssss’, ‘swatch’])</p>
-<blockquote>
-<p>六、创建 css 文件</p>
-</blockquote>
-<p>在根目录创建 css 文件夹，并在 css/ 目录下创建 index.css 文件。</p>
-<p>/<em> index.css </em>/</p>
-<p>body{<br>    background:blue;<br>}<br>.content{<br>    width:1200px;<br>}</p>
-<blockquote>
-<p>七、运行 gulp 查看效果</p>
-</blockquote>
-<p>在命令行输入 gulp +回车<br>gulp</p>
-<p>实现效果，gulp 会创建 dist/css 目录，并创建 a.css 文件，此文件存放压缩后的 css 代码。 dist/css/index.css,修改css文件，压缩的css也会相对应改变，html引入的是 压缩后的css</p>
-
+<h2 id="JavaScript字符串操作"><a href="#JavaScript字符串操作" class="headerlink" title="JavaScript字符串操作"></a><p>JavaScript字符串操作</p></h2><p>1、charCodeAt方法返回一个整数，代表指定位置字符的Unicode编码。<br>strObj.charCodeAt(index)<br>说明：<br>index将被处理字符的从零开始计数的编号。有效值为0到字符串长度减1的数字。<br>如果指定位置没有字符，将返回NaN。<br>例如：<br>var str = “ABC”;<br>str.charCodeAt(0);<br>结果：65<br><a id="more"></a><br>2、fromCharCode方法从一些Unicode字符串中返回一个字符串。<br>String.fromCharCode([code1[,code2…]])<br>说明：<br>code1，code2…是要转换为字符串的Unicode字符串序列。如果没有参数，结果为空字符串。<br>例如：<br>String.fromCharCode(65,66,112);<br>结果：ABp</p>
+<p>3、charAt方法返回指定索引位置处的字符。如果超出有效范围的索引值返回空字符串。<br>strObj.charAt(index)<br>说明：<br>index想得到的字符的基于零的索引。有效值是0与字符串长度减一之间的值。<br>例如：<br>var str = “ABC”;<br>str.charAt(1);<br>结果：B<br>4、slice方法返回字符串的片段。<br>strObj.slice(start[,end])<br>说明：<br>start下标从0开始的strObj指定部分其实索引。如果start为负，将它作为length+start处理，此处length为字符串的长度。<br>end小标从0开始的strObj指定部分结束索引。如果end为负，将它作为length+end处理，此处length为字符串的长度。<br>例如：<br>012345<br>var str = “ABCDEF”;<br>str.slice(2,4);<br>结果：CD<br>5、substring方法返回位于String对象中指定位置的子字符串。<br>strObj.substring(start,end)<br>说明：<br>start指明子字符串的起始位置，该索引从0开始起算。<br>end指明子字符串的结束位置，该索引从0开始起算。<br>substring方法使用start和end两者中的较小值作为子字符串的起始点。如果start或end为NaN或者为负数，那么将其替换为0。<br>例如：<br>012345<br>var str = “ABCDEF”;<br>str.substring(2,4); // 或 str.substring(4,2);<br>结果：CD<br>6、substr方法返回一个从指定位置开始的指定长度的子字符串。<br>strObj.substr(start[,length])<br>说明：<br>start所需的子字符串的起始位置。字符串中的第一个字符的索引为0。<br>length在返回的子字符串中应包括的字符个数。<br>例如：<br>012345<br>var str = “ABCDEF”;<br>str.substr(2,4);<br>结果：CDEF<br>7、indexOf方法放回String对象内第一次出现子字符串位置。如果没有找到子字符串，则返回-1。<br>strObj.indexOf(substr[,startIndex])<br>说明：<br>substr要在String对象中查找的子字符串。<br>startIndex该整数值指出在String对象内开始查找的索引。如果省略，则从字符串的开始处查找。<br>例如：<br>01234567<br>var str = “ABCDECDF”;<br>str.indexOf(“CD”，1); // 由1位置从左向右查找 123…<br>结果：2<br>8、lastIndexOf方法返回String对象中字符串最后出现的位置。如果没有匹配到子字符串，则返回-1。<br>strObj.lastIndexOf(substr[,startindex])<br>说明：<br>substr要在String对象内查找的子字符串。<br>startindex该整数值指出在String对象内进行查找的开始索引位置。如果省略，则查找从字符串的末尾开始。<br>例如：<br>01234567<br>var str = “ABCDECDF”;<br>str.lastIndexOf(“CD”,6); // 由6位置从右向左查找 …456<br>结果：5<br>9、search方法返回与正则表达式查找内容匹配的第一个字符串的位置。<br>strObj.search(reExp)<br>说明：<br>reExp包含正则表达式模式和可用标志的正则表达式对象。<br>例如：<br>var str = “ABCDECDF”;<br>str.search(“CD”); // 或 str.search(/CD/i);<br>结果：2<br>10、concat方法返回字符串值，该值包含了两个或多个提供的字符串的连接。<br>str.concat([string1[,string2…]])<br>说明：<br>string1，string2要和所有其他指定的字符串进行连接的String对象或文字。<br>例如：<br>var str = “ABCDEF”;<br>str.concat(“ABCDEF”,”ABC”);<br>结果：ABCDEFABCDEFABC<br>11、将一个字符串分割为子字符串，然后将结果作为字符串数组返回。<br>strObj.split([separator[,limit]])<br>说明：<br>separator字符串或 正则表达式 对象，它标识了分隔字符串时使用的是一个还是多个字符。如果忽略该选项，返回包含整个字符串的单一元素数组。<br>limit该值用来限制返回数组中的元素个数。<br>例如：<br>var str = “AA BB CC DD EE FF”;<br>alert(str.split(“ “，3));<br>结果：<br>AA,BB,CC<br>12、toLowerCase方法返回一个字符串，该字符串中的字母被转换成小写。<br>例如：<br>var str = “ABCabc”;<br>str.toLowerCase();<br>结果：abcabc<br>13、toUpperCase方法返回一个字符串，该字符串中的所有字母都被转换为大写字母。<br>例如：<br>var str = “ABCabc”;<br>str.toUpperCase();<br>结果：ABCABC</p>
+<!--more-->
       
 
       
@@ -310,7 +255,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/16/gulp/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/16/javascript字符串操作/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -324,7 +269,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/16/css垂直水平居中/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/16/hexo搭建博客/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -334,7 +279,7 @@
     </a>
   
   
-    <a href="/2017/03/16/hexo搭建博客/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/03/16/gulp压缩css/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>

@@ -6,14 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | 古晨博客</title>
+  <title>古晨博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="gulp热更新
+安装Node（必须）
+
+作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。正式安装
+
+一、全局安装gulpnpm install –global gulp 或者二、进入你的文件目录 例如   cd/d/project 文件夹   在当前文件夹安装确保根目录下面有 package.json文件如果没有，使用 npm init 命令自动生成">
+<meta property="og:type" content="article">
 <meta property="og:title" content="古晨博客">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/03/16/gulp热更新/index.html">
 <meta property="og:site_name" content="古晨博客">
+<meta property="og:description" content="gulp热更新
+安装Node（必须）
+
+作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。正式安装
+
+一、全局安装gulpnpm install –global gulp 或者二、进入你的文件目录 例如   cd/d/project 文件夹   在当前文件夹安装确保根目录下面有 package.json文件如果没有，使用 npm init 命令自动生成">
+<meta property="og:updated_time" content="2017-08-03T02:14:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="古晨博客">
+<meta name="twitter:description" content="gulp热更新
+安装Node（必须）
+
+作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。正式安装
+
+一、全局安装gulpnpm install –global gulp 或者二、进入你的文件目录 例如   cd/d/project 文件夹   在当前文件夹安装确保根目录下面有 package.json文件如果没有，使用 npm init 命令自动生成">
   
     <link rel="alternative" href="/atom.xml" title="古晨博客" type="application/atom+xml">
   
@@ -153,43 +172,206 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-gulp热更新" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/09/git部署ssh/" class="archive-article-date">
-  	<time datetime="2016-03-09T15:51:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+          <p></p>
 
+
+<h3 id="gulp热更新"><a href="#gulp热更新" class="headerlink" title="  gulp热更新"></a><p>  gulp热更新</p></h3><blockquote>
+<p>安装Node（必须）</p>
+</blockquote>
+<p>作用：用来生成静态页面的 到Node.js官网下载相应平台的最新版本，一路安装即可。<br>正式安装</p>
+<blockquote>
+<p>一、全局安装gulp<br>npm install –global gulp 或者<br>二、进入你的文件目录 例如   cd/d/project 文件夹   在当前文件夹安装<br>确保根目录下面有 package.json文件如果没有，使用 npm init 命令自动生成</p>
+</blockquote>
+<a id="more"></a>
+<p>执行命令之后你会看到如下信息<br>This utility will walk you through creating a package.json file.<br>It only covers the most common items, and tries to guess sensible defaults.</p>
+<p>See <code>npm help json</code> for definitive documentation on these fields<br>and exactly what they do.</p>
+<p>Use <code>npm install &lt;pkg&gt; --save</code> afterwards to install a package and<br>save it as a dependency in the package.json file.</p>
+<p>Press ^C at any time to quit.<br>name: (Other) </p>
+<p>name 必须填写，其他可以忽略 一直回车  根目录会生成 package.json</p>
+<blockquote>
+<p> 三、作为项目的开发依赖（devDependencies）安装：</p>
+<blockquote>
+<p>复制以下代码到package.json</p>
+</blockquote>
+</blockquote>
+<p>{<br>  “name”: “guijitu”,<br>  “version”: “1.0.0”,<br>  “description”: “”,<br>  “main”: “index.js”,<br>  “scripts”: {<br>    “test”: “echo \”Error: no test specified\” &amp;&amp; exit 1”<br>  },<br>  “author”: “”,<br>  “license”: “ISC”,<br>  “devDependencies”: {<br>    “gulp-livereload”: “^3.8.1”,<br>    “gulp-minify-css”: “^1.2.4”<br>  },<br>  “dependencies”: {<br>    “gulp”: “^3.9.1”,<br>    “gulp-connect”: “^5.0.0”<br>  }<br>}</p>
+<blockquote>
+<blockquote>
+<p>命令窗口执行   npm install 安装依赖</p>
+</blockquote>
+<p> 四、package.json同级文件夹   新建gulpfile.js文件</p>
+</blockquote>
+<p>   内容如下</p>
+<p>   var gulp = require(‘gulp’),<br>    connect = require(‘gulp-connect’),//使用connect启动一个Web服务器<br>    minifyCSS = require(‘gulp-minify-css’);</p>
+<pre><code>var src = {
+    html: [&apos;./*.html&apos;, &apos;*.html&apos;],
+    css:[&apos;css/*.css&apos;, &apos;./css/*.css&apos;],
+}
+
+
+gulp.task(&apos;connect&apos;, function() {
+    connect.server({
+        port: 8888,
+        root: &apos;./&apos;, //当前项目主目录
+        livereload: true //自动刷新
+    });
+});
+gulp.task(&apos;mincss&apos;,function(){
+    gulp.src(src.css)
+    .pipe(minifyCSS())
+    .pipe(gulp.dest(&apos;dist/css&apos;))
+    .pipe(connect.reload())
+})
+gulp.task(&apos;html&apos;, function() {
+    gulp.src(src.html)
+        .pipe(connect.reload());
+});
+
+gulp.task(&apos;watch&apos;, function() {
+    gulp.watch(&apos;./css/*.css&apos;, [&apos;mincss&apos;]); //监控css文件
+    gulp.watch(&apos;js/*.js&apos;, [&apos;html&apos;]); //监控js文件
+    gulp.watch([&apos;*.html&apos;], [&apos;html&apos;]); //监控html文件
+}); //执行gulp server开启服务器
+
+gulp.task(&apos;server&apos;, [&apos;connect&apos;, &apos;watch&apos;]);
+
+
+命令窗口执行 gulp server,执行成功可以通过 localhost:8888访问，默认是访问当前文件夹的index.html,如需访问reg.html，则为localhost:8888/reg.html
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>搞包芙蓉王吧，谢谢<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://onx0br3fu.bkt.clouddn.com/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://onx0br3fu.bkt.clouddn.com/WeChat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/16/gulp热更新/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/03/16/gulp压缩css/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2016/03/09/git部署ssh/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -212,8 +394,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
